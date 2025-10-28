@@ -1,64 +1,111 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kulikage Parts — Кастомные автодетали</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Kulikage Parts — Custom Auto Seals & 3D-Printed Components</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Kulikage Parts — precision custom seals and 3D-printed auto parts. Engineered fits, oil/ coolant resistant materials, small batches. Charlotte, NC." />
+  <meta name="keywords" content="Kulikage Parts, custom seals, o-rings, 3D printed bushings, TPU 80A, Viton, Dacia Duster K9K, Chevy Blazer bushings" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Kulikage Parts — Custom Auto Seals & 3D-Printed Components" />
+  <meta property="og:description" content="Precision seals and 3D-printed parts for your car. Small batches, engineered fits, US-made." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/og-image.jpg" />
+  <meta property="og:url" content="https://kulikage.parts" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Favicon (optional: place files in /assets) -->
+  <link rel="icon" href="assets/favicon.png" />
+
   <style>
-    :root{--bg:#0b0d12;--panel:#121621;--muted:#8b93a7;--text:#e8ecf8;--accent:#5cc8ff;--accent-2:#7aff9a;--card:#101420;--ring:#2a3246}
+    :root{
+      /* Light theme */
+      --bg:#f7f9fc;
+      --card:#ffffff;
+      --panel:#ffffff;
+      --ring:#dfe4ee;
+      --text:#1c1f26;
+      --muted:#5a6275;
+      --accent:#007bff;
+      --accent-2:#2dd36f;
+      --shadow:0 10px 24px rgba(16,24,40,.08);
+    }
     *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:linear-gradient(180deg,#0b0d12 0%,#0f1421 100%);color:var(--text);font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif}
+    html,body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif}
     a{color:var(--accent);text-decoration:none}
     .container{max-width:1100px;margin:0 auto;padding:24px}
+
     /* Header */
-    header{position:sticky;top:0;z-index:50;background:rgba(11,13,18,.75);backdrop-filter:blur(10px);border-bottom:1px solid var(--ring)}
+    header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--ring)}
     .nav{display:flex;align-items:center;justify-content:space-between;gap:16px}
     .brand{display:flex;align-items:center;gap:12px}
-    .logo{width:36px;height:36px;border-radius:12px;background:radial-gradient(circle at 30% 30%,#7aff9a 0%,#5cc8ff 45%,#1b2539 65%);box-shadow:0 0 0 2px #1c2334, 0 8px 24px rgba(92,200,255,.25)}
-    .brand h1{font-size:18px;margin:0;letter-spacing:.4px}
-    .menu{display:flex;gap:14px;flex-wrap:wrap}
-    .menu a{padding:10px 14px;border:1px solid transparent;border-radius:10px}
-    .menu a:hover{border-color:var(--ring);background:#0d1320}
+    .logo{width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,#2dd36f 0%,#00b3ff 60%);box-shadow:0 0 0 2px #e8eef7,0 8px 24px rgba(0,123,255,.18)}
+    .brand h1{font-size:18px;margin:0;letter-spacing:.3px}
+    .menu{display:flex;gap:12px;flex-wrap:wrap}
+    .menu a{padding:10px 12px;border:1px solid transparent;border-radius:10px;color:var(--text)}
+    .menu a:hover{border-color:var(--ring);background:#fff;box-shadow:var(--shadow)}
+
+    /* Buttons */
+    .btn{display:inline-block;padding:12px 16px;border-radius:12px;border:1px solid var(--ring);background:#fff;color:var(--text);cursor:pointer;box-shadow:var(--shadow)}
+    .btn:hover{transform:translateY(-1px)}
+    .btn.primary{background:linear-gradient(90deg,#00a2ff,#2dd36f);border:none;color:#fff;font-weight:600}
+
     /* Hero */
-    .hero{padding:56px 0;display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center}
+    .hero{padding:48px 0;display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center}
     .hero h2{font-size:36px;line-height:1.15;margin:0 0 12px}
     .hero p{color:var(--muted);margin:0 0 18px}
     .cta{display:flex;gap:12px;flex-wrap:wrap}
-    .btn{padding:12px 18px;border-radius:12px;border:1px solid var(--ring);background:#12192a;color:var(--text);cursor:pointer}
-    .btn.primary{background:linear-gradient(90deg,#5cc8ff,#7aff9a);color:#0b0d12;border:none;font-weight:600}
-    .hero-card{background:linear-gradient(180deg,#0f1524,#0d1320);border:1px solid var(--ring);border-radius:18px;padding:18px;box-shadow:0 12px 30px rgba(0,0,0,.35)}
+    .hero-card{background:var(--panel);border:1px solid var(--ring);border-radius:16px;padding:18px;box-shadow:var(--shadow)}
     .hero-spec{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px}
-    .pill{border:1px solid var(--ring);border-radius:999px;padding:8px 10px;color:var(--muted);text-align:center}
+    .pill{border:1px solid var(--ring);border-radius:999px;padding:8px 10px;color:var(--muted);text-align:center;background:#fff}
+
     /* Sections */
-    section{padding:28px 0}
+    section{padding:26px 0}
     .section-title{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
     .section-title h3{margin:0;font-size:22px}
     .section-sub{color:var(--muted);font-size:14px}
+
     /* Categories */
     .cats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
-    .cat{background:linear-gradient(180deg,#101626,#0e1422);border:1px solid var(--ring);border-radius:14px;padding:16px}
+    .cat{background:#fff;border:1px solid var(--ring);border-radius:12px;padding:14px;box-shadow:var(--shadow)}
     .cat h4{margin:6px 0;font-size:16px}
     .cat p{margin:0;color:var(--muted);font-size:13px}
+
     /* Grid */
     .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-    .card{background:linear-gradient(180deg,#0f1524,#0c111c);border:1px solid var(--ring);border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
-    .img{aspect-ratio:4/3;background:#0a0f1a;border-bottom:1px solid var(--ring);display:flex;align-items:center;justify-content:center;font-size:13px;color:var(--muted);text-align:center;padding:8px}
+    .card{background:var(--card);border:1px solid var(--ring);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;box-shadow:var(--shadow)}
+    .img{aspect-ratio:4/3;background:#f1f4f9;border-bottom:1px solid var(--ring);display:flex;align-items:center;justify-content:center;font-size:13px;color:var(--muted);text-align:center;padding:8px}
     .content{padding:14px;display:grid;gap:8px}
     .title{font-weight:600}
     .meta{color:var(--muted);font-size:13px}
     .price{font-size:18px;font-weight:700}
     .actions{display:flex;gap:8px;margin-top:6px}
-    .badge{display:inline-block;border:1px solid var(--ring);border-radius:8px;padding:4px 8px;font-size:12px;color:var(--muted)}
+    .badge{display:inline-block;border:1px solid var(--ring);border-radius:8px;padding:4px 8px;font-size:12px;color:var(--muted);background:#fff}
+
     /* About */
     .about{display:grid;grid-template-columns:1.2fr .8fr;gap:18px}
-    .panel{background:linear-gradient(180deg,#0f1524,#0d1320);border:1px solid var(--ring);border-radius:16px;padding:16px}
+    .panel{background:var(--panel);border:1px solid var(--ring);border-radius:14px;padding:16px;box-shadow:var(--shadow)}
+
     /* Footer */
-    footer{margin-top:34px;border-top:1px solid var(--ring);background:#0c111c}
-    .foot{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;padding:24px 0;color:var(--muted)}
-    .small{font-size:12px;color:#7381a3}
+    footer{margin-top:34px;border-top:1px solid var(--ring);background:#fff}
+    .foot{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;padding:22px 0;color:var(--muted)}
+    .small{font-size:12px;color:#6b7285}
+
     /* Responsive */
-    @media (max-width:980px){.hero{grid-template-columns:1fr}.about{grid-template-columns:1fr}.cats{grid-template-columns:repeat(2,1fr)}.grid{grid-template-columns:repeat(2,1fr)}}
-    @media (max-width:640px){.cats,.grid{grid-template-columns:1fr}.menu{display:none}.hero h2{font-size:28px}}
+    @media (max-width:980px){
+      .hero{grid-template-columns:1fr}
+      .about{grid-template-columns:1fr}
+      .cats{grid-template-columns:repeat(2,1fr)}
+      .grid{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:640px){
+      .cats,.grid{grid-template-columns:1fr}
+      .menu{display:none}
+      .hero h2{font-size:28px}
+    }
   </style>
 </head>
 <body>
@@ -69,11 +116,11 @@
         <h1>Kulikage Parts</h1>
       </div>
       <nav class="menu">
-        <a href="#catalog">Каталог</a>
-        <a href="#about">О бренде</a>
-        <a href="#order">Заказ</a>
-        <a href="#pay">Оплата</a>
-        <a href="#contacts">Контакты</a>
+        <a href="#catalog">Catalog</a>
+        <a href="#about">About</a>
+        <a href="#order">Order</a>
+        <a href="#pay">Payment</a>
+        <a href="#contacts">Contacts</a>
       </nav>
     </div>
   </header>
@@ -82,19 +129,19 @@
     <!-- HERO -->
     <section class="hero">
       <div>
-        <h2>Кастомные уплотнения и детали для авто<br/>точность • долговечность • эффективность</h2>
-        <p>Специализация: уплотнительные кольца и 3D‑печатные детали. Точные посадки, стойкие материалы, экономия топлива и ресурса. Производство в США.</p>
+        <h2>Custom Seals & 3D-Printed Auto Parts<br/>precision • durability • efficiency</h2>
+        <p>Specialized in sealing rings and 3D-printed components. Engineered fits, resistant materials, better fuel economy and longevity. Built in the USA.</p>
         <div class="cta">
-          <a class="btn primary" href="#catalog">Смотреть каталог</a>
-          <a class="btn" href="#order">Заказать нестандарт</a>
+          <a class="btn primary" href="#catalog">Browse catalog</a>
+          <a class="btn" href="#order">Request a custom part</a>
         </div>
       </div>
       <div class="hero-card">
-        <div class="img" style="border-radius:12px">Здесь будет ваша фото‑карусель/рендер</div>
+        <div class="img" style="border-radius:10px">Your photo carousel / render goes here</div>
         <div class="hero-spec">
           <div class="pill">TPU 80A / NBR / Viton</div>
-          <div class="pill">Точность ±0.05 мм</div>
-          <div class="pill">Тесты ресурса 500+ ч</div>
+          <div class="pill">Tolerance ±0.05 mm</div>
+          <div class="pill">Endurance tests 500+ h</div>
         </div>
       </div>
     </section>
@@ -102,161 +149,161 @@
     <!-- CATEGORIES -->
     <section id="categories">
       <div class="section-title">
-        <h3>Категории</h3>
-        <span class="section-sub">Быстрый доступ к разделам</span>
+        <h3>Categories</h3>
+        <span class="section-sub">Quick access to sections</span>
       </div>
       <div class="cats">
-        <a class="cat" href="#catalog"><h4>Уплотнительные кольца</h4><p>Двигатели K9K, BMM и др.</p></a>
-        <a class="cat" href="#catalog"><h4>3D‑печатные детали</h4><p>TPU 80A/95A, PETG, Nylon</p></a>
-        <a class="cat" href="#catalog"><h4>Подвеска</h4><p>Втулки стабилизатора, прокладки</p></a>
-        <a class="cat" href="#catalog"><h4>Спецпроекты</h4><p>Индивидуальные заказы</p></a>
+        <a class="cat" href="#catalog"><h4>Sealing rings</h4><p>Engines K9K, BMM, and more</p></a>
+        <a class="cat" href="#catalog"><h4>3D-printed parts</h4><p>TPU 80A/95A, PETG, Nylon</p></a>
+        <a class="cat" href="#catalog"><h4>Suspension</h4><p>Stabilizer bushings, gaskets</p></a>
+        <a class="cat" href="#catalog"><h4>Special projects</h4><p>One-off and small batches</p></a>
       </div>
     </section>
 
     <!-- CATALOG -->
     <section id="catalog">
       <div class="section-title">
-        <h3>Каталог</h3>
-        <span class="section-sub">Первые позиции Kulikage Parts. Фото и цены можно обновлять в любой момент.</span>
+        <h3>Catalog</h3>
+        <span class="section-sub">Initial Kulikage Parts lineup. Photos and prices can be updated anytime.</span>
       </div>
       <div class="grid">
         <!-- ITEM 1 -->
         <article class="card" id="item-k9k-kit-2017">
-          <div class="img">Фото: Комплект уплотнительных колец K9K (2017+) — 4шт</div>
+          <div class="img">Image: K9K seal kit (2017+) — 4 pcs</div>
           <div class="content">
-            <div class="title">Комплект уплотнительных колец K9K (2017+) — 4шт</div>
-            <div class="meta">Совместимость: Dacia/Renault Duster, Logan, Sandero; мотор K9K</div>
-            <span class="badge">Материал: FKM/Viton</span>
+            <div class="title">K9K Seal Kit (2017+) — 4 pcs</div>
+            <div class="meta">Compatibility: Dacia/Renault Duster, Logan, Sandero; K9K engine</div>
+            <span class="badge">Material: FKM/Viton</span>
             <div class="price">$24.00</div>
             <div class="actions">
-              <a class="btn" href="#order">Заказать</a>
-              <a class="btn" href="#pay">Оплатить</a>
+              <a class="btn" href="#order">Order</a>
+              <a class="btn" href="#pay">Pay</a>
             </div>
           </div>
         </article>
         <!-- ITEM 2 -->
         <article class="card" id="item-k9k-kit-858">
-          <div class="img">Фото: Комплект уплотнительных колец K9K 858 (интеркулер/турбина/дроссель) — 6шт</div>
+          <div class="img">Image: K9K 858 seal kit (intercooler/turbo/throttle) — 6 pcs</div>
           <div class="content">
-            <div class="title">Комплект уплотнительных колец K9K 858 (интеркулер/турбина/дроссель) — 6шт</div>
-            <div class="meta">Совместимость: Duster дизель K9K 858 90/110 л.с.</div>
-            <span class="badge">Материал: FKM/Viton</span>
+            <div class="title">K9K 858 Seal Kit (intercooler / turbo / throttle) — 6 pcs</div>
+            <div class="meta">Compatibility: Duster diesel K9K 858 90/110 hp</div>
+            <span class="badge">Material: FKM/Viton</span>
             <div class="price">$29.00</div>
             <div class="actions">
-              <a class="btn" href="#order">Заказать</a>
-              <a class="btn" href="#pay">Оплатить</a>
+              <a class="btn" href="#order">Order</a>
+              <a class="btn" href="#pay">Pay</a>
             </div>
           </div>
         </article>
         <!-- ITEM 3 -->
         <article class="card" id="item-circlip-throttle">
-          <div class="img">Фото: Стопорное кольцо дросселя K9K 858 (1шт)</div>
+          <div class="img">Image: Throttle joint circlip K9K 858 (1 pc)</div>
           <div class="content">
-            <div class="title">Стопорное кольцо дроссельного соединения K9K 858 — 1шт</div>
-            <div class="meta">Совместимость: Duster/Logan K9K</div>
-            <span class="badge">Материал: пружинная сталь</span>
+            <div class="title">Throttle Joint Circlip — K9K 858 — 1 pc</div>
+            <div class="meta">Compatibility: Duster/Logan K9K</div>
+            <span class="badge">Material: Spring steel</span>
             <div class="price">$8.00</div>
             <div class="actions">
-              <a class="btn" href="#order">Заказать</a>
-              <a class="btn" href="#pay">Оплатить</a>
+              <a class="btn" href="#order">Order</a>
+              <a class="btn" href="#pay">Pay</a>
             </div>
           </div>
         </article>
         <!-- ITEM 4 -->
         <article class="card" id="item-circlip-intake">
-          <div class="img">Фото: Стопорное кольцо соединения над клапанной крышкой K9K 858</div>
+          <div class="img">Image: Intake pipe circlip above valve cover K9K 858</div>
           <div class="content">
-            <div class="title">Стопорное кольцо соединения над клапанной крышкой K9K 858 — 1шт</div>
-            <div class="meta">Совместимость: Duster/Logan K9K 1.5 dCi</div>
-            <span class="badge">Материал: пружинная сталь</span>
+            <div class="title">Intake Pipe Circlip Above Valve Cover — K9K 858 — 1 pc</div>
+            <div class="meta">Compatibility: Duster/Logan K9K 1.5 dCi</div>
+            <span class="badge">Material: Spring steel</span>
             <div class="price">$8.00</div>
             <div class="actions">
-              <a class="btn" href="#order">Заказать</a>
-              <a class="btn" href="#pay">Оплатить</a>
+              <a class="btn" href="#order">Order</a>
+              <a class="btn" href="#pay">Pay</a>
             </div>
           </div>
         </article>
         <!-- ITEM 5 -->
         <article class="card" id="item-k9k-884-kit">
-          <div class="img">Фото: Комплект уплотнительных колец K9K 884 (интеркулер/турбина/дроссель) — 6шт</div>
+          <div class="img">Image: K9K 884 seal kit — 6 pcs</div>
           <div class="content">
-            <div class="title">Комплект уплотнительных колец K9K 884 (интеркулер/турбина/дроссель) — 6шт</div>
-            <div class="meta">Совместимость: Duster дизель K9K 884 90 л.с.</div>
-            <span class="badge">Материал: FKM/Viton</span>
+            <div class="title">K9K 884 Seal Kit (intercooler / turbo / throttle) — 6 pcs</div>
+            <div class="meta">Compatibility: Duster diesel K9K 884 90 hp</div>
+            <span class="badge">Material: FKM/Viton</span>
             <div class="price">$20.00</div>
             <div class="actions">
-              <a class="btn" href="#order">Заказать</a>
-              <a class="btn" href="#pay">Оплатить</a>
+              <a class="btn" href="#order">Order</a>
+              <a class="btn" href="#pay">Pay</a>
             </div>
           </div>
         </article>
         <!-- ITEM 6 -->
         <article class="card" id="item-hub-cap-screw-4">
-          <div class="img">Фото: Заглушка/колпак ступицы на резьбе (Duster) — 4шт</div>
+          <div class="img">Image: Screw-on hub cap (Duster) — 4 pcs</div>
           <div class="content">
-            <div class="title">Заглушка/колпак ступицы на резьбе (Duster) — комплект 4шт</div>
-            <div class="meta">Цвет: чёрный или серый. Быстрый монтаж, защита резьбы.</div>
-            <span class="badge">Материал: ABS/TPU</span>
+            <div class="title">Screw-On Hub Cap (Duster) — Set of 4</div>
+            <div class="meta">Colors: black or grey. Quick install, thread protection.</div>
+            <span class="badge">Material: ABS/TPU</span>
             <div class="price">$14.00</div>
             <div class="actions">
-              <a class="btn" href="#order">Заказать</a>
-              <a class="btn" href="#pay">Оплатить</a>
+              <a class="btn" href="#order">Order</a>
+              <a class="btn" href="#pay">Pay</a>
             </div>
           </div>
         </article>
         <!-- ITEM 7 -->
         <article class="card" id="item-cruise-kit">
-          <div class="img">Фото: Круиз-контроль — комплект для установки</div>
+          <div class="img">Image: Cruise control — installation kit</div>
           <div class="content">
-            <div class="title">Круиз‑контроль для Renault Duster 2021+ — комплект</div>
-            <div class="meta">Комплект для установки (проводка/кнопки), совместимость см. в описании</div>
-            <span class="badge">Гарантия совместимости</span>
+            <div class="title">Cruise Control for Renault Duster 2021+ — Kit</div>
+            <div class="meta">Wiring & buttons. See description for compatibility.</div>
+            <span class="badge">Compatibility guaranteed</span>
             <div class="price">$59.00</div>
             <div class="actions">
-              <a class="btn" href="#order">Заказать</a>
-              <a class="btn" href="#pay">Оплатить</a>
+              <a class="btn" href="#order">Order</a>
+              <a class="btn" href="#pay">Pay</a>
             </div>
           </div>
         </article>
         <!-- ITEM 8 -->
         <article class="card" id="item-door-damper">
-          <div class="img">Фото: Демпферы на замок двери/багажника (комплект 5шт)</div>
+          <div class="img">Image: Door/trunk latch dampers — set of 5</div>
           <div class="content">
-            <div class="title">Демпферы на замок двери и багажника — комплект 5шт</div>
-            <div class="meta">Для Duster/Arkana/Kaptur/Logan и др. Убирают люфт/шум</div>
-            <span class="badge">Материал: эластомер</span>
+            <div class="title">Door & Trunk Latch Dampers — Set of 5</div>
+            <div class="meta">For Duster/Arkana/Kaptur/Logan. Eliminates rattle & play.</div>
+            <span class="badge">Material: Elastomer</span>
             <div class="price">$12.00</div>
             <div class="actions">
-              <a class="btn" href="#order">Заказать</a>
-              <a class="btn" href="#pay">Оплатить</a>
+              <a class="btn" href="#order">Order</a>
+              <a class="btn" href="#pay">Pay</a>
             </div>
           </div>
         </article>
         <!-- ITEM 9 -->
         <article class="card" id="item-blazer-bushings">
-          <div class="img">Фото: Втулки стабилизатора Chevy Blazer (TPU 80A) — пара</div>
+          <div class="img">Image: Chevy Blazer stabilizer bushings (TPU 80A) — pair</div>
           <div class="content">
-            <div class="title">Втулки стабилизатора — Chevy Blazer (TPU 80A) — пара</div>
-            <div class="meta">Повышенная износостойкость, тихая работа подвески</div>
-            <span class="badge">Материал: TPU 80A</span>
+            <div class="title">Stabilizer Bushings — Chevy Blazer (TPU 80A) — Pair</div>
+            <div class="meta">High wear-resistance, quiet suspension operation</div>
+            <span class="badge">Material: TPU 80A</span>
             <div class="price">$24.00</div>
             <div class="actions">
-              <a class="btn" href="#order">Заказать</a>
-              <a class="btn" href="#pay">Оплатить</a>
+              <a class="btn" href="#order">Order</a>
+              <a class="btn" href="#pay">Pay</a>
             </div>
           </div>
         </article>
         <!-- ITEM 10 -->
         <article class="card" id="item-pcv-hose">
-          <div class="img">Фото: Патрубок вентиляции картера — кастом по размерам</div>
+          <div class="img">Image: PCV hose — custom sized</div>
           <div class="content">
-            <div class="title">Патрубок вентиляции картера — кастом</div>
-            <div class="meta">По размерам клиента; стойкость к маслам/ОЖ</div>
-            <span class="badge">Материал: Nylon/PETG</span>
-            <div class="price">от $19.00</div>
+            <div class="title">PCV Hose — Custom</div>
+            <div class="meta">Made to your dimensions; oil/coolant resistant</div>
+            <span class="badge">Material: Nylon/PETG</span>
+            <div class="price">from $19.00</div>
             <div class="actions">
-              <a class="btn" href="#order">Заказать</a>
-              <a class="btn" href="#pay">Оплатить</a>
+              <a class="btn" href="#order">Order</a>
+              <a class="btn" href="#pay">Pay</a>
             </div>
           </div>
         </article>
@@ -266,88 +313,85 @@
     <!-- ABOUT -->
     <section id="about">
       <div class="section-title">
-        <h3>О Kulikage Parts</h3>
-        <span class="section-sub">Инженерные решения и материалы уровня R&D</span>
+        <h3>About Kulikage Parts</h3>
+        <span class="section-sub">Engineering-grade materials & processes</span>
       </div>
       <div class="about">
         <div class="panel">
-          <p><strong>Kulikage Parts</strong> — инжиниринговый бренд Николая Куликова (Charlotte, NC). Производим уплотнительные кольца и детали для авто с упором на точность, ресурс и экономичность. Используем TPU 80A/95A, Viton, NBR, Nylon и композиты. Заказы возможны по образцам и чертежам.</p>
+          <p><strong>Kulikage Parts</strong> is an engineering brand by Nikolai Kulikov (Charlotte, NC). We produce sealing rings and custom parts with a focus on precise fit, service life, and efficiency. Materials include TPU 80A/95A, Viton, NBR, Nylon and composites. Orders by samples or drawings are welcome.</p>
           <ul>
-            <li>Индивидуальная подгонка и тесты посадок</li>
-            <li>Материалы под конкретные среды (нефть/ОЖ/выхлоп)</li>
-            <li>Малые серии и быстрые сроки</li>
+            <li>Individual fit & test assemblies</li>
+            <li>Materials tailored to oil/coolant/exhaust environments</li>
+            <li>Small batches with quick turnaround</li>
           </ul>
         </div>
         <div class="panel">
-          <p><strong>Оплата и доставка:</strong> PayPal или Stripe‑инвойс, самовывоз в Charlotte. Отправка по США/миру USPS/UPS.</p>
-          <p class="small">* Этот блок можно заменить виджетом eBay/PayPal или формой оплаты позже.</p>
+          <p><strong>Payment & Shipping:</strong> PayPal or Stripe invoice; local pickup in Charlotte. Worldwide shipping via USPS/UPS.</p>
+          <p class="small">* This panel can be replaced later with eBay/PayPal widgets or direct checkout.</p>
         </div>
       </div>
     </section>
 
-    <!-- ORDER / PAYMENT -->
+    <!-- ORDER -->
     <section id="order">
       <div class="section-title">
-        <h3>Заказ</h3>
-        <span class="section-sub">Заполните форму — мы подтвердим совместимость и сроки</span>
+        <h3>Order</h3>
+        <span class="section-sub">Fill the form — we’ll confirm compatibility and lead time</span>
       </div>
-      <div class="panel">
-        <p class="small">Ниже встроена Google‑форма. Замените ссылку на свою форму (Файл → Опубликовать → Получить ссылку для встраивания).</p>
-        <div class="panel" style="padding:0;border-radius:12px;overflow:hidden">
-  <iframe
-    src="https://docs.google.com/forms/d/e/1FAIpQLScYtuWzLaD6e-F9NettwHA8eDB3aclvhGQsLVjEQkGennclPw/viewform?embedded=true"
-    style="display:block;width:100%;height:720px;border:0"
-    allow="clipboard-write; encrypted-media; fullscreen; picture-in-picture">
-  </iframe>
-</div>
+      <div class="panel" style="padding:0;border-radius:12px;overflow:hidden">
+        <iframe
+          src="https://docs.google.com/forms/d/e/1FAIpQLScYtuWzLaD6e-F9NettwHA8eDB3aclvhGQsLVjEQkGennclPw/viewform?embedded=true"
+          style="display:block;width:100%;height:720px;border:0"
+          allow="clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+        </iframe>
       </div>
     </section>
 
+    <!-- PAYMENT -->
     <section id="pay">
       <div class="section-title">
-        <h3>Оплата</h3>
-        <span class="section-sub">Временные опции: PayPal или Stripe‑инвойс</span>
+        <h3>Payment</h3>
+        <span class="section-sub">Temporary options: PayPal or Stripe invoice</span>
       </div>
       <div class="panel">
-        <p><strong>PayPal:</strong> <a class="btn" href="https://www.paypal.me/kulicage" target="_blank" rel="noopener noreferrer">
-  Оплатить PayPal
-</a>
-<!-- на всякий случай можно дать и простой текстовый дубликат-ссылку ниже -->
-<p class="small">
-  Альтернативная ссылка: <a href="https://www.paypal.me/kulicage" target="_blank" rel="noopener noreferrer">
-  https://www.paypal.me/kulicage</a>
-</p>
-        <p><strong>Картой (Stripe):</strong> оставьте email в форме заказа — пришлём инвойс Stripe. <a class="btn" href="#order">Оставить email</a></p>
-        <p class="small">После оплаты укажите номер заказа/товара в примечании. Отправка по США/миру USPS/UPS.</p>
+        <p><strong>PayPal:</strong> 
+          <a class="btn" href="https://www.paypal.me/kulicage" target="_blank" rel="noopener noreferrer">Pay with PayPal</a>
+        </p>
+        <p><strong>Card (Stripe):</strong> leave your email in the order form — we’ll send a Stripe invoice. 
+          <a class="btn" href="#order">Leave email</a>
+        </p>
+        <p class="small">After payment, please include your product/item number in the note. Shipping worldwide via USPS/UPS.</p>
       </div>
     </section>
 
     <!-- CONTACTS -->
     <section id="contacts">
       <div class="section-title">
-        <h3>Контакты</h3>
-        <span class="section-sub">Связаться для заказа и консультации</span>
+        <h3>Contacts</h3>
+        <span class="section-sub">Get in touch for orders and engineering consultation</span>
       </div>
       <div class="panel">
         <p><strong>Email:</strong> <a href="mailto:info@kulikage.parts">info@kulikage.parts</a></p>
-        <p><strong>Соцсети:</strong> <a href="#">Instagram</a> · <a href="#">Facebook</a> · <a href="#">eBay</a></p>
+        <p><strong>Socials:</strong> <a href="#">Instagram</a> · <a href="#">Facebook</a> · <a href="#">eBay</a></p>
       </div>
     </section>
   </main>
 
   <footer>
     <div class="container foot">
-      <div>
-        <div class="small">© <span id="copyyear">2018</span> Kulikage Parts. Все права защищены.</div>
-      </div>
-      <div class="small">Сделано инженером для инженеров.</div>
+      <div><div class="small">© <span id="copyyear">2018</span> Kulikage Parts. All rights reserved.</div></div>
+      <div class="small">Engineered by an engineer.</div>
       <div class="small" style="text-align:right">Charlotte, NC</div>
     </div>
   </footer>
 
-  <script>(function () {
-    var y = new Date().getFullYear();
-    document.getElementById('copyyear').textContent = y > 2018 ? '2018–' + y : '2018';
-  })();</script>
+  <script>
+    // Auto copyright: 2018–current
+    (function () {
+      var y = new Date().getFullYear();
+      var el = document.getElementById('copyyear');
+      if (el) el.textContent = y > 2018 ? '2018–' + y : '2018';
+    })();
+  </script>
 </body>
 </html>
