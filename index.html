@@ -293,17 +293,13 @@
       </div>
       <div class="panel">
         <p class="small">Ниже встроена Google‑форма. Замените ссылку на свою форму (Файл → Опубликовать → Получить ссылку для встраивания).</p>
-        <div class="img" style="height:480px">
-          <iframe
-  src="https://docs.google.com/forms/d/e/1FAIpQLScYtuWzLaD6e-F9NettwHA8eDB3aclvhGQsLVjEQkGennclPw/viewform?embedded=true"
-  width="100%" 
-  height="640" 
-  frameborder="0" 
-  marginheight="0" 
-  marginwidth="0">
-  Загрузка…
-</iframe>
-        </div>
+        <div class="panel" style="padding:0;border-radius:12px;overflow:hidden">
+  <iframe
+    src="https://docs.google.com/forms/d/e/1FAIpQLScYtuWzLaD6e-F9NettwHA8eDB3aclvhGQsLVjEQkGennclPw/viewform?embedded=true"
+    style="display:block;width:100%;height:720px;border:0"
+    allow="clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+  </iframe>
+</div>
       </div>
     </section>
 
@@ -313,7 +309,14 @@
         <span class="section-sub">Временные опции: PayPal или Stripe‑инвойс</span>
       </div>
       <div class="panel">
-        <p><strong>PayPal:</strong> <a class="btn" href="https://paypal.me/kulicage" target="_blank" rel="noopener">Оплатить PayPal</a></p>
+        <p><strong>PayPal:</strong> <a class="btn" href="https://www.paypal.me/kulicage" target="_blank" rel="noopener noreferrer">
+  Оплатить PayPal
+</a>
+<!-- на всякий случай можно дать и простой текстовый дубликат-ссылку ниже -->
+<p class="small">
+  Альтернативная ссылка: <a href="https://www.paypal.me/kulicage" target="_blank" rel="noopener noreferrer">
+  https://www.paypal.me/kulicage</a>
+</p>
         <p><strong>Картой (Stripe):</strong> оставьте email в форме заказа — пришлём инвойс Stripe. <a class="btn" href="#order">Оставить email</a></p>
         <p class="small">После оплаты укажите номер заказа/товара в примечании. Отправка по США/миру USPS/UPS.</p>
       </div>
