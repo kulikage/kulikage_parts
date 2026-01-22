@@ -39,12 +39,10 @@ header {
 
 .brand { display: flex; align-items: center; gap: 12px; }
 
-.logo {
-  width: 36px;
-  height: 36px;
-  border-radius: 10px;
-  background: linear-gradient(135deg, #2dd36f 0%, #00b3ff 60%);
-  box-shadow: 0 0 0 2px #e8eef7, 0 8px 24px rgba(0, 123, 255, .18);
+.logo-img {
+  height: 40px; /* Высота логотипа */
+  width: auto;  /* Ширина подстроится автоматически */
+  display: block;
 }
 
 .brand h1 { font-size: 18px; margin: 0; letter-spacing: .3px; }
