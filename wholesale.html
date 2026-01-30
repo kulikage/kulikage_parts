@@ -286,7 +286,7 @@
                     Fill out the form below. We will send you the price list and a sample offer within 24 hours.
                 </p>
 
-                <form action="https://formspree.io/f/xkobvoba" method="POST">
+                <form id="wholesale-form" action="https://formspree.io/f/xkobvoba" method="POST">
                     
                     <div class="form-group">
                         <label>Name</label>
@@ -337,6 +337,8 @@
                         <textarea name="message" class="form-control" rows="3" placeholder="Any specific questions?"></textarea>
                     </div>
 
+                    <div id="form-status" style="margin-bottom: 15px; border-radius: 4px;"></div>
+                    
                     <button type="submit" class="btn" style="width: 100%;">Get Price List</button>
                 </form>
             </div>
@@ -352,5 +354,67 @@
         </div>
     </footer>
 
+<script>
+    var form = document.getElementById("wholesale-form");
+    
+    async function handleSubmit(event) {
+      event.preventDefault();
+      var status = document.getElementById("form-status");
+      var btn = form.querySelector("button[type='submit']");
+      var data = new FormData(event.target);
+
+      // Визуальный эффект загрузки
+      var originalBtnText = btn.innerText;
+      btn.innerText = "Sending...";
+      btn.disabled = true;
+
+      fetch(event.target.action, {
+        method: form.method,
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+      }).then(response => {
+        if (response.ok) {
+          // УСПЕХ
+          status.innerHTML = "✅ Thank you! We have received your request. Check your email shortly.";
+          status.style.padding = "10px";
+          status.style.backgroundColor = "rgba(46, 204, 113, 0.2)"; // Полупрозрачный зеленый
+          status.style.border = "1px solid #2ecc71";
+          status.style.color = "#2ecc71";
+          status.style.textAlign = "center";
+          
+          form.reset(); // Очистить форму
+        } else {
+          // ОШИБКА СЕРВЕРА
+          response.json().then(data => {
+            if (Object.hasOwn(data, 'errors')) {
+              status.innerHTML = data["errors"].map(error => error["message"]).join(", ");
+            } else {
+              status.innerHTML = "❌ Oops! There was a problem submitting your form";
+            }
+            // Стили ошибки
+            status.style.color = "#e74c3c"; 
+            status.style.textAlign = "center";
+          })
+        }
+      }).catch(error => {
+        // ОШИБКА СЕТИ
+        status.innerHTML = "❌ Oops! There was a problem submitting your form";
+        status.style.color = "#e74c3c";
+        status.style.textAlign = "center";
+      }).finally(() => {
+        // Возвращаем кнопку в исходное состояние
+        btn.innerText = "Sent!";
+        setTimeout(() => {
+            btn.innerText = originalBtnText;
+            btn.disabled = false;
+        }, 3000);
+      });
+    }
+
+    form.addEventListener("submit", handleSubmit);
+</script>
+    
 </body>
 </html>
