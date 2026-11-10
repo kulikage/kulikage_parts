@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kulikage Parts — Engineered fixes and upgrades</title>
+<meta name="description" content="Repair kits for known weak spots and upgrades the factory left out — built for a specific vehicle and engine, with fitment diagrams, OEM cross-references and test data.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Kulikage Parts">
+<meta property="og:title" content="Kulikage Parts — Engineered fixes and upgrades">
+<meta property="og:description" content="Charge-air seal kits, circlips, retrofit kits and intake upgrades — built for a specific vehicle and engine.">
+<link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"Kulikage Parts","email":"sales@kulikage.parts","address":{"@type":"PostalAddress","addressLocality":"Charlotte","addressRegion":"NC","addressCountry":"US"}}
+</script>
+</head>
+<body>
+
+<div class="topbar"><div class="container topbar-inner"><span>Ships worldwide from Charlotte, NC</span><a href="order.html?trade=1">Trade accounts for workshops and parts stores →</a></div></div>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html"><img src="assets/img/logo.svg" width="34" height="34" alt=""><span>Kulikage <span class="brand-sub">Parts</span></span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav id="site-nav" class="nav" aria-label="Main">
+      <a href="#finder-card">Shop by vehicle</a>
+      <a href="#fix">Fix</a>
+      <a href="#upgrade">Upgrade</a>
+      <a href="#how">How we test</a>
+      <a href="order.html?trade=1">Trade</a>
+    </nav>
+    <div class="header-actions">
+      <label class="sr-only" for="region">Region</label>
+      <select id="region" class="region-select"><option value="EU">Europe · EUR</option><option value="US">United States · USD</option></select>
+      <a class="btn btn-dark btn-sm" href="order.html">Order</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <span class="eyebrow">Engineered fixes &amp; upgrades</span>
+        <h1>Fixes for known weak spots. Upgrades the factory left out.</h1>
+        <p>Every part is built for a specific vehicle and engine — with the fitment diagram, OEM cross-references and test data on its product page.</p>
+        <div class="hero-links">
+          <a class="to-fix" href="#fix">Browse Fix <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a class="to-upgrade" href="#upgrade">Browse Upgrade <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </div>
+
+      <div class="finder" id="finder-card">
+        <h2>Find parts for your car</h2>
+        <form id="finder" class="stack" style="gap:16px">
+          <div class="finder-grid">
+            <div class="field"><label for="f-make">Make</label><select id="f-make" class="select"><option>Dacia</option></select></div>
+            <div class="field"><label for="f-model">Model</label><select id="f-model" class="select"><option>Duster II</option></select></div>
+            <div class="field" style="grid-column:1 / -1"><label for="f-engine">Engine</label><select id="f-engine" class="select"><option>1.5 dCi · K9K 858</option></select></div>
+          </div>
+          <button class="btn btn-primary btn-lg" type="submit">Show matching parts <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+          <p id="finder-msg" class="form-msg" role="status"></p>
+        </form>
+        <div class="divider-text">or search by part number</div>
+        <form id="oem-form" class="stack" style="gap:10px">
+          <div class="search-row">
+            <label for="oem-search" class="sr-only">OEM or part number</label>
+            <input id="oem-search" class="input input-mono" type="search" placeholder="e.g. 144601FE0C" autocomplete="off">
+            <button class="icon-btn" type="submit" aria-label="Search by part number"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></button>
+          </div>
+          <p id="oem-msg" class="form-msg" role="status"></p>
+        </form>
+        <p class="small-note">Not sure about the engine? It's on the engine plate — or <a href="mailto:sales@kulikage.parts?subject=Fitment%20check">send us your VIN</a> and we'll check fitment.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="coverage" aria-label="Vehicles we cover">
+    <div class="container coverage-inner">
+      <span class="small-note" style="font-weight:600;margin-right:8px">Vehicles we cover</span>
+      <span class="chip">Dacia <small>K9K</small></span>
+      <span class="chip">Renault <small>K9K · M9R</small></span>
+      <span class="chip">Nissan <small>K9K</small></span>
+      <span class="chip chip-dashed">Chevrolet <small>Equinox, Blazer · in development</small></span>
+    </div>
+  </section>
+
+  <section class="container section grid-auto" style="--min:min(340px,100%);gap:24px;padding-top:72px">
+    <div id="fix" class="card card-pad tile">
+      <span class="tag tag-fix tag-lg" style="align-self:flex-start"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.2L4 16.8V20h3.2l5.3-5.3a4 4 0 0 0 5.2-5.4l-2.6 2.6-2.4-.6-.6-2.4z"/></svg>FIX</span>
+      <h2>Repair kits for known failures</h2>
+      <p class="body-muted" style="font-size:16px">Seal kits and circlips for the charge-air joints where factory seals harden and boost starts to leak.</p>
+      <div class="lines">
+        <a href="product-k9k-858-seal-kit.html"><span>Charge-air seal kits</span><span class="mono">K9K · M9R</span></a>
+        <a href="vehicle-dacia-duster-ii-k9k-858.html"><span>Circlips, sold individually</span><span class="mono">K9K</span></a>
+        <a href="vehicle-dacia-duster-ii-k9k-858.html"><span>Complete repair sets: seals + circlips</span><span class="mono">K9K 858</span></a>
+      </div>
+    </div>
+    <div id="upgrade" class="card card-pad tile">
+      <span class="tag tag-upgrade tag-lg" style="align-self:flex-start"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg>UPGRADE</span>
+      <h2>Features the factory left out</h2>
+      <p class="body-muted" style="font-size:16px">Retrofit kits and intake upgrades — designed in CAD, checked with CFD and datalogs on a real car.</p>
+      <div class="lines">
+        <a href="vehicle-dacia-duster-ii-k9k-858.html#upgrade-parts"><span>Cruise control retrofit kit</span><span>Dacia Duster II (2021+)</span></a>
+        <a href="product-equinox-intake.html"><span>Intake kit: housing + filter</span><span>Chevrolet Equinox, Blazer · in development</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="container section-tight">
+    <div class="section-head">
+      <h2>Start here</h2>
+      <a class="link-arrow" href="#finder-card">All parts for your car →</a>
+    </div>
+    <div class="grid-auto" style="--min:250px">
+      <a class="product-card" href="product-k9k-858-seal-kit.html">
+        <div class="ph">[Kit photo]</div>
+        <div class="product-card-body">
+          <div class="tags"><span class="tag tag-fix">FIX</span><span class="tag">EU</span></div>
+          <span class="product-card-title">Charge-air seal kit — K9K 858</span>
+          <span class="product-card-meta">Dacia Duster II, Logan II, Sandero II · 5 seals</span>
+          <span class="product-card-sku">K2285850S</span>
+          <span class="product-card-price"><span data-cur>€</span> [PRICE]</span>
+        </div>
+      </a>
+      <a class="product-card" href="vehicle-dacia-duster-ii-k9k-858.html">
+        <div class="ph">[Circlip photo]</div>
+        <div class="product-card-body">
+          <div class="tags"><span class="tag tag-fix">FIX</span><span class="tag">EU</span></div>
+          <span class="product-card-title">Circlips for K9K charge-air joints</span>
+          <span class="product-card-meta">4 positions, each marked on the diagram · sold individually</span>
+          <span class="product-card-sku">[SKU ×4]</span>
+          <span class="product-card-price">from <span data-cur>€</span> [PRICE]</span>
+        </div>
+      </a>
+      <a class="product-card" href="vehicle-dacia-duster-ii-k9k-858.html#upgrade-parts">
+        <div class="ph">[Kit photo]</div>
+        <div class="product-card-body">
+          <div class="tags"><span class="tag tag-upgrade">UPGRADE</span><span class="tag">EU</span></div>
+          <span class="product-card-title">Cruise control retrofit kit</span>
+          <span class="product-card-meta">Dacia Duster II (2021+) · activation required — see guide</span>
+          <span class="product-card-sku">[SKU]</span>
+          <span class="product-card-price"><span data-cur>€</span> [PRICE]</span>
+        </div>
+      </a>
+      <a class="product-card product-card-dashed" href="product-equinox-intake.html">
+        <div class="ph ph-graphite">[CAD render]</div>
+        <div class="product-card-body">
+          <div class="tags"><span class="tag tag-upgrade">UPGRADE</span><span class="tag">US</span><span class="tag tag-dark">IN DEVELOPMENT</span></div>
+          <span class="product-card-title">Intake kit: housing + filter</span>
+          <span class="product-card-meta">Chevrolet Equinox (2018) · Blazer (2021) next</span>
+          <span class="product-card-sku">Follow the build log</span>
+          <span class="product-card-price">Get notified →</span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <section id="how" class="container section">
+    <div class="stack" style="max-width:720px;gap:10px;margin-bottom:28px">
+      <span class="eyebrow">How we test</span>
+      <h2 style="font-size:clamp(28px,3.4vw,36px)">We show the data behind every part — not adjectives.</h2>
+    </div>
+    <div class="grid-auto" style="--min:280px">
+      <div class="card card-pad stack step" style="gap:10px;padding:24px"><span class="step-num">01</span><h3>Design</h3><p class="body-muted">CAD from measured OEM parts. For airflow parts: CFD of pressure drop and of the flow profile at the air-mass sensor.</p></div>
+      <div class="card card-pad stack step" style="gap:10px;padding:24px"><span class="step-num">02</span><h3>Validate</h3><p class="body-muted">Fit check on a real car, then OBD datalogs before and after: boost requested vs. actual, air mass, fuel trims.</p></div>
+      <div class="card card-pad stack step" style="gap:10px;padding:24px"><span class="step-num">03</span><h3>Document</h3><p class="body-muted">Fitment diagram, OEM cross-references, install guide and the test results — on every product page.</p></div>
+    </div>
+    <div class="card case" style="margin-top:20px">
+      <div class="ph">[Chart: boost requested vs. actual, before / after — from your datalog]</div>
+      <div class="stack" style="gap:10px">
+        <span class="mono small-note">CASE STUDY</span>
+        <h3 style="font-size:22px">[Vehicle, engine, mileage]: boost leak at the intercooler joints</h3>
+        <p class="body-muted">[What the logs showed before the repair, what changed after. Real measurements only.]</p>
+        <a class="link-arrow" href="product-k9k-858-seal-kit.html#test-data">Read the case study →</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="trade" class="container section">
+    <div class="trade">
+      <div>
+        <h2>Workshop or parts store?</h2>
+        <p>Trade pricing from 10 kits per order, mixed SKUs allowed. Each kit individually packed with label and barcode. OEM cross-reference sheets included.</p>
+      </div>
+      <div class="btn-row">
+        <a class="btn btn-light" href="order.html?trade=1">Open a trade account</a>
+        <a class="btn btn-ghost-light" href="assets/WholesalePilotCatalog.pdf">Download catalog (PDF)</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div><span class="footer-brand">Kulikage Parts</span><span class="muted">Engineered fixes and upgrades. Charlotte, NC, USA.</span><a class="footer-strong" href="mailto:sales@kulikage.parts">sales@kulikage.parts</a><span class="muted">WhatsApp: [NUMBER]</span></div>
+    <div><span class="footer-title">Shop</span><a href="index.html#finder-card">By vehicle</a><a href="index.html#fix">Fix</a><a href="index.html#upgrade">Upgrade</a><a href="order.html">Order</a></div>
+    <div><span class="footer-title">Support</span><a href="mailto:sales@kulikage.parts?subject=Fitment%20check">Fitment help</a><a href="product-k9k-858-seal-kit.html#install">Install guides</a><a href="product-k9k-858-seal-kit.html#shipping">Shipping &amp; returns</a></div>
+    <div><span class="footer-title">Company</span><a href="index.html#how">How we test</a><a href="order.html?trade=1">Trade</a><a href="privacy.html">Privacy policy</a></div>
+  </div>
+  <div class="container footer-bottom">© <span data-year>2026</span> Kulikage Parts · [LEGAL ENTITY NAME] · Charlotte, NC, USA</div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

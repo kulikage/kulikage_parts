@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Order or trade request — Kulikage Parts</title>
+<meta name="description" content="Order Kulikage parts or open a trade account. We confirm fitment, shipping and the final price by email within 24 hours.">
+<link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div class="topbar"><div class="container topbar-inner"><span>Ships worldwide from Charlotte, NC</span><a href="order.html?trade=1">Trade accounts for workshops and parts stores →</a></div></div>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html"><img src="assets/img/logo.svg" width="34" height="34" alt=""><span>Kulikage <span class="brand-sub">Parts</span></span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav id="site-nav" class="nav" aria-label="Main">
+      <a href="index.html#finder-card">Shop by vehicle</a>
+      <a href="index.html#fix">Fix</a>
+      <a href="index.html#upgrade">Upgrade</a>
+      <a href="index.html#how">How we test</a>
+      <a href="order.html?trade=1">Trade</a>
+    </nav>
+    <div class="header-actions">
+      <label class="sr-only" for="region">Region</label>
+      <select id="region" class="region-select"><option value="EU">Europe · EUR</option><option value="US">United States · USD</option></select>
+      <a class="btn btn-dark btn-sm" href="order.html" aria-current="page">Order</a>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+  <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a><span aria-hidden="true">/</span><span aria-current="page">Order</span></nav>
+
+  <div class="pdp" style="margin-top:20px">
+    <div class="stack" style="gap:16px">
+      <h1 style="font-size:clamp(30px,4vw,40px)">Order or trade request</h1>
+      <p class="lead">Tell us what you need. We confirm fitment, shipping cost and the final price by email — usually within 24 hours — and send a PayPal or bank-transfer invoice.</p>
+      <div class="card card-pad stack" style="gap:10px">
+        <strong>Workshops and parts stores</strong>
+        <p class="body-muted">Trade pricing from 10 kits per order, mixed SKUs allowed. Tick “Trade account” and tell us your expected volume.</p>
+        <a class="link-arrow" href="assets/WholesalePilotCatalog.pdf">Download catalog (PDF) →</a>
+      </div>
+      <p class="small-note">Prefer email? <a href="mailto:sales@kulikage.parts">sales@kulikage.parts</a> · WhatsApp: [NUMBER]</p>
+    </div>
+
+    <form id="order-form" class="card card-pad stack" style="gap:18px" data-ajax method="POST">
+      <input type="hidden" name="_subject" value="Order request — kulikage.parts">
+      <div class="form-grid">
+        <div class="field"><label for="o-name">Name</label><input id="o-name" class="input" name="name" required autocomplete="name"></div>
+        <div class="field"><label for="o-company">Company <span style="font-weight:400">(optional)</span></label><input id="o-company" class="input" name="company" autocomplete="organization"></div>
+        <div class="field"><label for="o-email">Email</label><input id="o-email" class="input" type="email" name="email" required autocomplete="email"></div>
+        <div class="field"><label for="o-country">Country</label><input id="o-country" class="input" name="country" required autocomplete="country-name"></div>
+        <div class="field span-all"><label for="o-sku">Product</label>
+          <select id="o-sku" class="select" name="product">
+            <optgroup label="Fix — K9K 858 (Duster II, Logan II, Sandero II)">
+              <option value="K2285850S">Charge-air seal kit K9K 858 — K2285850S</option>
+              <option value="SET-K9K858">Complete set K9K 858: seal kit + 4 circlips</option>
+              <option value="CLIP-A">Circlip A — pipe connection above the valve cover</option>
+              <option value="CLIP-B">Circlip B — throttle connection</option>
+              <option value="CLIP-C">Circlip C — throttle body (2019+)</option>
+              <option value="CLIP-D">Circlip D — intercooler lower pipe / turbo outlet</option>
+            </optgroup>
+            <optgroup label="Fix — other engines">
+              <option value="K2288440S">Seal kit K9K 884 — K2288440S</option>
+              <option value="K2564640S">Seal kit K9K 646 / 636 — K2564640S</option>
+              <option value="K2283660S">Seal kit K9K 836 — K2283660S</option>
+              <option value="K22M9R40S">Seal kit M9R — K22M9R40S</option>
+            </optgroup>
+            <optgroup label="Upgrade">
+              <option value="CRUISE-DUSTER2">Cruise control retrofit kit — Duster II (2021+)</option>
+            </optgroup>
+            <optgroup label="Other">
+              <option value="MIXED">Mixed order / several products</option>
+              <option value="CUSTOM">Custom part — engineering request</option>
+            </optgroup>
+          </select>
+        </div>
+        <div class="field"><label for="o-qty">Quantity</label><input id="o-qty" class="input" type="number" name="quantity" min="1" value="1"></div>
+        <div class="field"><label for="o-vehicle">Vehicle / engine / VIN <span style="font-weight:400">(optional)</span></label><input id="o-vehicle" class="input" name="vehicle"></div>
+        <div class="span-all"><label class="check"><input type="checkbox" id="o-trade" name="trade_account" value="yes">Trade account (workshop or parts store)</label></div>
+        <div class="field span-all"><label for="o-msg">Message <span style="font-weight:400">(optional)</span></label><textarea id="o-msg" class="textarea" name="message" placeholder="Delivery address, mixed SKUs, photos of your joints…"></textarea></div>
+      </div>
+      <button class="btn btn-primary btn-lg" type="submit">Send request</button>
+      <p class="small-note">We use your details only to answer this request. See our <a href="privacy.html">privacy policy</a>.</p>
+      <p class="form-msg" role="status"></p>
+    </form>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div><span class="footer-brand">Kulikage Parts</span><span class="muted">Engineered fixes and upgrades. Charlotte, NC, USA.</span><a class="footer-strong" href="mailto:sales@kulikage.parts">sales@kulikage.parts</a><span class="muted">WhatsApp: [NUMBER]</span></div>
+    <div><span class="footer-title">Shop</span><a href="index.html#finder-card">By vehicle</a><a href="index.html#fix">Fix</a><a href="index.html#upgrade">Upgrade</a><a href="order.html">Order</a></div>
+    <div><span class="footer-title">Support</span><a href="mailto:sales@kulikage.parts?subject=Fitment%20check">Fitment help</a><a href="product-k9k-858-seal-kit.html#install">Install guides</a><a href="product-k9k-858-seal-kit.html#shipping">Shipping &amp; returns</a></div>
+    <div><span class="footer-title">Company</span><a href="index.html#how">How we test</a><a href="order.html?trade=1">Trade</a><a href="privacy.html">Privacy policy</a></div>
+  </div>
+  <div class="container footer-bottom">© <span data-year>2026</span> Kulikage Parts · [LEGAL ENTITY NAME] · Charlotte, NC, USA</div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

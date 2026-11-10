@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Intake kit for Chevrolet Equinox 2018 (in development) — Kulikage Parts</title>
+<meta name="description" content="Sealed housing + cone filter for the 2018 Chevrolet Equinox 1.5T and 2.0T, designed around the factory air-mass sensor. In development — follow the build log and get notified at launch.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Kulikage Parts">
+<meta property="og:title" content="Intake kit for Chevrolet Equinox 2018 — in development">
+<meta property="og:description" content="Sealed housing + cone filter, designed around the factory air-mass sensor. Measurements published before launch.">
+<link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div class="topbar"><div class="container topbar-inner"><span>Ships worldwide from Charlotte, NC</span><a href="order.html?trade=1">Trade accounts for workshops and parts stores →</a></div></div>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html"><img src="assets/img/logo.svg" width="34" height="34" alt=""><span>Kulikage <span class="brand-sub">Parts</span></span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav id="site-nav" class="nav" aria-label="Main">
+      <a href="index.html#finder-card">Shop by vehicle</a>
+      <a href="index.html#fix">Fix</a>
+      <a href="index.html#upgrade" aria-current="page">Upgrade</a>
+      <a href="index.html#how">How we test</a>
+      <a href="order.html?trade=1">Trade</a>
+    </nav>
+    <div class="header-actions">
+      <label class="sr-only" for="region">Region</label>
+      <select id="region" class="region-select"><option value="EU">Europe · EUR</option><option value="US">United States · USD</option></select>
+      <a class="btn btn-dark btn-sm" href="order.html">Order</a>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="index.html">Home</a><span aria-hidden="true">/</span><a href="index.html#upgrade">Upgrade</a><span aria-hidden="true">/</span><span>Intake kits</span><span aria-hidden="true">/</span><span aria-current="page">Chevrolet Equinox 2018</span>
+  </nav>
+
+  <div class="pdp">
+    <div class="gallery" style="--thumbs:3">
+      <div class="ph ph-graphite gallery-main">[CAD render: housing + cone filter]</div>
+      <div class="gallery-thumbs">
+        <div class="ph ph-graphite is-active">[CAD]</div>
+        <div class="ph">[CFD: flow at sensor]</div>
+        <div class="ph">[Prototype fit]</div>
+      </div>
+    </div>
+
+    <div class="buy">
+      <div class="tags"><span class="tag tag-upgrade tag-lg">UPGRADE</span><span class="tag tag-lg">Ships in the US</span><span class="tag tag-dark tag-lg">IN DEVELOPMENT</span></div>
+      <h1>Intake kit: housing + filter for Chevrolet Equinox (2018)</h1>
+      <p class="lead">A sealed housing for a cone filter, designed around the factory air-mass sensor. We publish the measurements before we sell it.</p>
+
+      <fieldset class="filter-group" style="gap:10px">
+        <legend style="font:600 14px var(--font);letter-spacing:0;color:var(--ink);margin-bottom:10px">Engine</legend>
+        <div class="engine-pick">
+          <button type="button" aria-pressed="true" data-engine="1.5L Turbo (LYX)">1.5L Turbo <small>LYX</small></button>
+          <button type="button" aria-pressed="false" data-engine="2.0L Turbo (LTG)">2.0L Turbo <small>LTG</small></button>
+        </div>
+        <span class="muted" style="font-size:14px">Chevrolet Blazer (2021) — planned next.</span>
+      </fieldset>
+
+      <form class="card stack" style="padding:20px" data-ajax data-ok="Done — we'll email you when the kit is ready." method="POST">
+        <div class="section-head" style="margin:0;align-items:baseline"><h2 style="font-size:20px">Get notified at launch</h2><span class="muted" style="font-size:14px">Expected price: $ [PRICE]</span></div>
+        <input type="hidden" name="_subject" value="Notify me: Equinox intake kit">
+        <input type="hidden" name="product" value="Intake kit — Chevrolet Equinox 2018">
+        <input type="hidden" name="engine" id="notify-engine" value="1.5L Turbo (LYX)">
+        <div class="search-row" style="flex-wrap:wrap;gap:10px">
+          <label for="notify-email" class="sr-only">Email</label>
+          <input id="notify-email" class="input" type="email" name="email" required placeholder="you@example.com" style="flex:1 1 220px;min-height:50px">
+          <button class="btn btn-primary" type="submit" style="min-height:50px">Notify me</button>
+        </div>
+        <p class="small-note">One email when it's ready. See our <a href="privacy.html">privacy policy</a>.</p>
+        <p class="form-msg" role="status"></p>
+      </form>
+
+      <div class="goals">
+        <strong style="font-size:14px">Design goals</strong>
+        <div class="goal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#15171A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Lower pressure drop than the stock airbox — measured, not promised</div>
+        <div class="goal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#15171A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Air-mass sensor reads as on stock: factory sensor tube, even flow at the sensor</div>
+        <div class="goal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#15171A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Cool intake air: sealed from engine-bay heat</div>
+        <div class="goal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#15171A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Filtration on par with the OEM element — [test standard, e.g. ISO 5011]</div>
+      </div>
+    </div>
+  </div>
+
+  <section class="card card-pad panel" style="margin-top:32px;gap:20px">
+    <div class="section-head" style="margin:0;align-items:baseline"><h2>Build log</h2><span class="muted" style="font-size:14px">Each step links to its results when done</span></div>
+    <ol class="build-log">
+      <li><span class="step-num">01</span><strong>CAD design</strong><span class="tag">[STATUS]</span></li>
+      <li><span class="step-num">02</span><strong>CFD: pressure drop and flow at the sensor</strong><span class="tag">[STATUS]</span></li>
+      <li><span class="step-num">03</span><strong>Prototype fit check</strong><span class="tag">[STATUS]</span></li>
+      <li><span class="step-num">04</span><strong>Datalogs: air mass, intake temp, fuel trims, knock</strong><span class="tag">[STATUS]</span></li>
+      <li><span class="step-num">05</span><strong>Release</strong><span class="tag">[DATE]</span></li>
+    </ol>
+    <div class="grid-auto" style="--min:min(320px,100%);gap:16px">
+      <div class="ph" style="min-height:220px">[CFD: pressure drop vs. airflow — stock airbox vs. Kulikage]</div>
+      <div class="ph" style="min-height:220px">[Datalog: intake air temp and fuel trims, stock vs. Kulikage, same route]</div>
+    </div>
+  </section>
+
+  <div class="two-col">
+    <section class="card card-pad panel">
+      <h2 style="font-size:24px">Emissions and legality</h2>
+      <p class="lead" style="font-size:15px">California and states that follow CARB rules: [CARB EO number — or: Not legal for sale or use in California on pollution-controlled motor vehicles].</p>
+      <p class="lead" style="font-size:15px">Check your local inspection rules before installing.</p>
+    </section>
+    <section class="card card-pad panel">
+      <h2 style="font-size:24px">Questions we'll answer with data</h2>
+      <div class="faq-item"><strong>Will it set a check-engine light?</strong><span class="body-muted">[From your datalogs]</span></div>
+      <div class="faq-item"><strong>Does it add power?</strong><span class="body-muted">[Measured figures only]</span></div>
+      <div class="faq-item"><strong>How often do I service the filter?</strong><span class="body-muted">[Interval]</span></div>
+    </section>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div><span class="footer-brand">Kulikage Parts</span><span class="muted">Engineered fixes and upgrades. Charlotte, NC, USA.</span><a class="footer-strong" href="mailto:sales@kulikage.parts">sales@kulikage.parts</a><span class="muted">WhatsApp: [NUMBER]</span></div>
+    <div><span class="footer-title">Shop</span><a href="index.html#finder-card">By vehicle</a><a href="index.html#fix">Fix</a><a href="index.html#upgrade">Upgrade</a><a href="order.html">Order</a></div>
+    <div><span class="footer-title">Support</span><a href="mailto:sales@kulikage.parts?subject=Fitment%20check">Fitment help</a><a href="product-k9k-858-seal-kit.html#install">Install guides</a><a href="product-k9k-858-seal-kit.html#shipping">Shipping &amp; returns</a></div>
+    <div><span class="footer-title">Company</span><a href="index.html#how">How we test</a><a href="order.html?trade=1">Trade</a><a href="privacy.html">Privacy policy</a></div>
+  </div>
+  <div class="container footer-bottom">© <span data-year>2026</span> Kulikage Parts · [LEGAL ENTITY NAME] · Charlotte, NC, USA</div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
